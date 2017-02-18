@@ -1,5 +1,9 @@
+<h3>Clique na região para doar</h3>
+
+<div id="map"></div>
+
 <ul *ngIf="states">
   <li *ngFor="let state of states">
-      <h5>{{state.name}} = R$ {{state.value}}</h5>
+      <h5>{{state.state}} = R$ {{state.value}}</h5>
   </li>
 </ul>
