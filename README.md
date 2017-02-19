@@ -1,7 +1,7 @@
 # ConductorTex2017
 Solução para resolver um dos desafios do milênio, proposto pela ONU: A erradicação da fome.
 
-##Como aproximar as pessoas utilizando meios de pagamento?
+## Como aproximar as pessoas utilizando meios de pagamento?
   Primeiramente, temos que entender o que afasta as pessoas. Rotina exaustiva, negatividade e dinheiro são os principais fatores. Por outro lado, o que mais aproxima as pessoas são boas experiências e trabalho em equipe.
   O dinheiro costuma gerar sentimentos ruins nas pessoas, mas ele pode ser convertido em algo muito maior, que aproxima as pessoas.
   
@@ -13,3 +13,8 @@ Solução para resolver um dos desafios do milênio, proposto pela ONU: A erradi
  
 ## Fazendo o bem e girando a economia
   Além de trabalhar em equipe e ajudar o próximo, os supermercados parceiros terão a oportunidade de conquistar os novos clientes, uma vez que estes terão Vale Alimentação em mãos.
+
+## Como foi desenvolvido
+  A solução é bastante simples. Foi utilizado scrapy (python), para extrair a os valores médios de vale alimentação nos estados brasileiros - calculado a partir da cesta básica - no site http://www.pesquisaprecomedio.com.br/preco-medio-alimentacao.php.
+  Com as informações em mãos, foi desenvolvido uma solução simples em AngularJS 2, para listar e receber mais doações doações.
+ 
