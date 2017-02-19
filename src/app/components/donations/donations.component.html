@@ -1,0 +1,6 @@
+<h3>Donations</h3>
+<ul>
+  <li *ngFor="let donation of donations | async">
+    {{donation.state}}: {{donation.value}}
+  </li>
+</ul>

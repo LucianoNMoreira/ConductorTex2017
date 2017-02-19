@@ -1,13 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import {Http} from '@angular/http';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Donation } from '../../donation';
+import { Http } from '@angular/http';
+
+import 'rxjs/add/operator/switchMap';
 
 declare var google:any;
 
 @Component({
+  moduleId: module.id,
   selector: 'map',
   templateUrl: './map.component.html'
 })
 export class MapComponent {
+  @Output() makeDonation = new EventEmitter<Donation>();
+  donation: Donation;
+
   private static googleLoaded:any;
   private options;
   private data;
@@ -15,6 +22,8 @@ export class MapComponent {
   private states;
 
   constructor(private http:Http) {
+    
+    //Get states and each values from scrapy json
     this.http.get('assets/values-json.json').subscribe(res =>{
 
       this.states = res.json();
@@ -25,13 +34,23 @@ export class MapComponent {
       }
 
       google.charts.setOnLoadCallback(() => this.drawGraph());
-
     });
   }
 
-  drawGraph(){
+  //Fires parent event to handle map click
+  clickMap(){
+    var selectedItem = this.chart.getSelection()[0];
+    if (selectedItem) {
+      var region = this.data.getValue(selectedItem.row, 0);
+      var value = this.data.getValue(selectedItem.row, 1);
 
-    var states_data = [['State', 'Popularity']];
+      this.donation = new Donation(region, value);
+      this.makeDonation.emit(this.donation);
+    }
+  }
+
+  drawGraph(){
+    var states_data = [['State', 'Valor doação (R$)']];
     for (let state of this.states) {
         states_data.push([state.state, state.value]);
     }
@@ -46,16 +65,9 @@ export class MapComponent {
 
     this.chart = new google.visualization.GeoChart(document.getElementById('map'));
     
-    var self = this;
     //map onSelect
-    google.visualization.events.addListener(this.chart, 'select',function() {
-      var selectedItem = self.chart.getSelection()[0];
-      if (selectedItem) {
-        var region = self.data.getValue(selectedItem.row, 0);
-        var value = self.data.getValue(selectedItem.row, 1);
-        console.log(region + " = R$ " + value);
-      }
-		});
+    google.visualization.events.addListener(this.chart, 'select',() => this.clickMap());
+
 
     this.chart.draw(this.data, this.options);
   }
