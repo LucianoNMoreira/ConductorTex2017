@@ -1,6 +1,13 @@
 <h3>Donations</h3>
-<ul>
-  <li *ngFor="let donation of donations | async">
-    {{donation.state}}: {{donation.value}}
+<ul *ngIf="statesDonation">
+  <li *ngFor="let state of statesDonation">
+    <article>
+      <header>
+        <h3>{{state.name}}</h3>
+      </header>
+      <div>
+        <h5>Donates: {{state.donates}} (R$ {{state.amount}})</h5>
+      </div>
+    </article>
   </li>
 </ul>

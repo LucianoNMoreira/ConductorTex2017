@@ -27,12 +27,10 @@ export class MapComponent {
     this.http.get('assets/values-json.json').subscribe(res =>{
 
       this.states = res.json();
-
       if(!MapComponent.googleLoaded) {
         MapComponent.googleLoaded = true;
         google.charts.load('current',  {packages: ['geochart']});
       }
-
       google.charts.setOnLoadCallback(() => this.drawGraph());
     });
   }
@@ -52,11 +50,10 @@ export class MapComponent {
   drawGraph(){
     var states_data = [['State', 'Valor doação (R$)']];
     for (let state of this.states) {
-        states_data.push([state.state, state.value]);
+        states_data.push([state.state, Math.round(state.value/8)]);
     }
     
     this.data = google.visualization.arrayToDataTable(states_data);
-
     this.options = {
       region : 'BR',
       displayMode : 'regions',
