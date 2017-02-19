@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MapComponent } from './components/map/map.component';
 import { DonationsComponent } from './components/donations/donations.component';
+import { InviteComponent } from './components/invite/invite.component';
 
 import { AngularFireModule } from 'angularfire2';
 import { AlertModule } from 'ng2-bootstrap';
@@ -23,7 +24,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     MapComponent,
-    DonationsComponent
+    DonationsComponent,
+    InviteComponent
   ],
   imports: [
     BrowserModule,
