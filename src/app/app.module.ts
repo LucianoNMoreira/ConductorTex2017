@@ -8,6 +8,9 @@ import { MapComponent } from './components/map/map.component';
 import { DonationsComponent } from './components/donations/donations.component';
 
 import { AngularFireModule } from 'angularfire2';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyCw2DNsz26dg3V-YGAjQHSJxm_psuBURXI",
@@ -27,7 +30,8 @@ export const firebaseConfig = {
     BrowserModule,
     AngularFireModule.initializeApp(firebaseConfig),
     FormsModule,
-    HttpModule
+    HttpModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
