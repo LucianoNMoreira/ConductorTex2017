@@ -15,6 +15,7 @@ export class DonationsComponent {
   private states;
   private firebase: AngularFire;
   private Math = Math;
+  private statesMap: any = {};
 
   constructor(private http:Http, af: AngularFire) {
       this.firebase = af;
@@ -30,25 +31,25 @@ export class DonationsComponent {
   list(){
       this.donations = this.firebase.database.list('/donations');
 
-      var statesMap={};
       //Iterate over donations and get stats
       this.donations.forEach(row => {
+        this.statesMap={};
         var state;
         for(let donation of row){
-          state = statesMap[donation.state];
+          state = this.statesMap[donation.state];
           if(!state){
             state = new StateDonation(donation.state, 0, 0);
           }
           state.amount += donation.value;
           ++state.donations;
-          statesMap[donation.state] = state;
+          this.statesMap[donation.state] = state;
         }
 
         //Populate states array
         this.statesDonation = [];
-        for (var property in statesMap) {
-            if (statesMap.hasOwnProperty(property)) {
-              this.statesDonation.push(statesMap[property]);
+        for (var property in this.statesMap) {
+            if (this.statesMap.hasOwnProperty(property)) {
+              this.statesDonation.push(this.statesMap[property]);
             }
         }
       });
