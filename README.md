@@ -1,31 +1,20 @@
 # ConductorTex2017
+Solução para resolver um dos desafios do milênio, proposto pela ONU: A erradicação da fome.
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
+## Como aproximar as pessoas utilizando meios de pagamento?
+  Primeiramente, temos que entender o que afasta as pessoas. Rotina exaustiva, negatividade e dinheiro são os principais fatores. Por outro lado, o que mais aproxima as pessoas são boas experiências e trabalho em equipe.
+  O dinheiro costuma gerar sentimentos ruins nas pessoas, mas ele pode ser convertido em algo muito maior, que aproxima as pessoas.
+  
+## Como assim?
+  O dinheiro, se bem aplicado, pode gerar ótimas experiências e trabalho em equipe.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Onde entram os meios de pagamento?
+  As pessoas irão fazer doações `recorrentes`, no valor de 1/6 da cesta básica em seu estado. Esse valor, somado a outras milhares de doações, serão convertidos em créditos em Vale Alimentação, que serão entregues em um almoço promovido por supermercados parceiros e os próprios doadores. 
+ 
+## Fazendo o bem e girando a economia
+  Além de trabalhar em equipe e ajudar o próximo, os supermercados parceiros terão a oportunidade de conquistar os novos clientes, uma vez que estes terão Vale Alimentação em mãos.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Deploying to GitHub Pages
-
-Run `ng github-pages:deploy` to deploy to GitHub Pages.
-
-## Further help
-
-To get more help on the `angular-cli` use `ng help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Como foi desenvolvido
+  A solução é bastante simples. Foi utilizado scrapy (python), para extrair a os valores médios de vale alimentação nos estados brasileiros - calculado a partir da cesta básica - no site http://www.pesquisaprecomedio.com.br/preco-medio-alimentacao.php.
+  Com as informações em mãos, foi desenvolvido uma solução simples em AngularJS 2, para listar e receber mais doações doações.
+ 
