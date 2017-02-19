@@ -7,7 +7,8 @@ import {AngularFire, FirebaseListObservable} from 'angularfire2';
 @Component({
   moduleId: module.id,
   selector: 'donations',
-  templateUrl: './donations.component.html'
+  templateUrl: './donations.component.html',
+  styleUrls: ['./donations.component.css']
 })
 export class DonationsComponent {
   

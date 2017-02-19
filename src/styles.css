@@ -4,8 +4,17 @@
 
 body{
     margin: 0 0 0 0;
+    background-color: #ECBB0E;
 }
 
-.example-fill-remaining-space {
+.fill-remaining-space {
   flex: 1 1 auto;
+}
+
+.container{
+    padding: 2% 10% 2% 10%;
+}
+
+.center{
+  text-align: center;
 }

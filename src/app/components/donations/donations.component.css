@@ -1,0 +1,35 @@
+section{
+  background-color: #187E8C;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+md-card{
+  text-align: center;
+  background-color: #55A4AF;
+}
+
+md-card,
+figure{
+  width: 80%;
+  height: 80%;
+}
+
+md-card-title{
+  font-size: x-large;
+  color: #0A6471;
+}
+
+md-card-content .donations{
+  margin-top: 10%;
+  font-size: large;
+  color: #0A6471;
+}
+md-card-content .amount{
+  font-size: large;
+  color: #FFD579;
+}
+md-card-actions a{
+  background-color: #FFD579;
+  color: #0A6471;
+}

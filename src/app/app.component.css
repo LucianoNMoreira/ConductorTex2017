@@ -1,0 +1,30 @@
+md-toolbar{
+    background-color: #47269D;
+}
+
+.content,
+footer{
+    font-family: "Verdana";
+}
+
+img.wide{
+    width: 100%;
+}
+
+.section-1{
+    color: white;
+    text-transform: uppercase;
+}
+.section-1 h1{
+    margin: 0 0 20px 0px;
+    font-size: xx-large;
+}
+.section-1 h2,
+.section-1 h3{
+    margin: 0 0 20px 50px;
+}
+
+footer{
+    background-color: #230A64;
+    color: white;
+}
