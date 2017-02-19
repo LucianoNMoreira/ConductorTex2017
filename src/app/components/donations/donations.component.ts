@@ -32,7 +32,6 @@ export class DonationsComponent {
       var statesMap={};
       //Iterate over donations and get stats
       this.donations.forEach(row => {
-        console.log(row);
         var state;
         for(let donation of row){
           state = statesMap[donation.state];
@@ -67,6 +66,7 @@ export class DonationsComponent {
     donation.date = new Date().toString();
     var ref = this.firebase.database.list('/donations').push(donation);
     this.firebase.database.list('/state-donations/'+donation.state).push({donation_key: ref.key});
+    this.list();
   }
 
 }
