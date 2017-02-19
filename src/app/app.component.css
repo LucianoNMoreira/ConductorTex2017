@@ -3,6 +3,7 @@ nav{
     border-radius: 0px;
     border: none;
     height: 70px;
+    margin-bottom: 0px;
 }
 .navbar-brand{
     color: white;
@@ -17,6 +18,15 @@ img.wide{
     width: 100%;
 }
 
+.section-intro{
+    background-color: #6F35A7;
+    color: #FFDF6B;
+    height: 400px;
+}
+.section-intro h1{
+    margin-top: 15%;
+    font-size: xx-large;
+}
 .section-1{
     color: white;
     text-transform: uppercase;
