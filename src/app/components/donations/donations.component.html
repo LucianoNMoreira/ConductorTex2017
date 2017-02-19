@@ -4,7 +4,8 @@
       <div class="card">
         <header>{{state.name}}</header>
         
-        <h3 class="donations">{{state.donations}} Donations</h3>
+        <h3 class="donations">{{state.donations}} Doações</h3>
+        <h3 class="donations">{{Math.round(state.donations/6)}} Famílias beneficiadas</h3>
         <h3 class="amount">R$ {{state.amount}}</h3>
 
         <a class="btn btn-primary btn-lg btn-block" (click)="donate(state)">Doar</a>

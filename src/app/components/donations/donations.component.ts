@@ -14,6 +14,7 @@ export class DonationsComponent {
   
   private states;
   private firebase: AngularFire;
+  private Math = Math;
 
   constructor(private http:Http, af: AngularFire) {
       this.firebase = af;
