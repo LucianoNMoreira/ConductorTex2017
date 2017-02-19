@@ -1,5 +1,11 @@
-md-toolbar{
+nav{
     background-color: #47269D;
+    border-radius: 0px;
+    border: none;
+    height: 70px;
+}
+.navbar-brand{
+    color: white;
 }
 
 .content,
@@ -27,4 +33,6 @@ img.wide{
 footer{
     background-color: #230A64;
     color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }

@@ -1,20 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
-
 body{
     margin: 0 0 0 0;
     background-color: #ECBB0E;
 }
 
-.fill-remaining-space {
-  flex: 1 1 auto;
-}
-
-.container{
-    padding: 2% 10% 2% 10%;
-}
-
 .center{
   text-align: center;
+}
+
+img{
+  width: 100%;
 }

@@ -1,10 +1,12 @@
-<md-toolbar color="primary">
-  <span>{{title}}</span>
-
-  <span class="fill-remaining-space"></span>
-
-  <md-icon>favorite</md-icon>
-</md-toolbar>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        {{title}}
+      </a>
+    </div>
+  </div>
+</nav>
 
 <div class="content">
     <img class="wide" src="/assets/img/ods2-banner.png">
@@ -12,7 +14,6 @@
     <section class="section-1 container">
         <h1>7,2 milhões de brasileiros passam fome</h1>
         <h3>Isso representa 0,35% da população. Nós podemos acabar com isso!</h3>
-        
         <h1>Juntos podemos resolver um dos objetivos do milênio, propostos pela ONU.</h1>
         <h2>Doe apenas 1/6 do valor da cesta básica, participe das ações mensais e vamos mudar o mundo!</h2>
     </section>
@@ -22,14 +23,15 @@
     <map (makeDonation)="handleMapClick($event)"></map>
 </div>
 
-<footer class="container">
-    <md-grid-list cols="4" rowHeight="100px">
-
-        <md-grid-tile [colspan]="2" [rowspan]="5">
-            <img src="assets/img/ODS-02.png">
-        </md-grid-tile>
-        <md-grid-tile [colspan]="2" [rowspan]="5">
-            <h1>Essa luta é maior que qualquer governo. É da humanidade!</h1>
-        </md-grid-tile>
-    </md-grid-list>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="assets/img/ODS-02.png">
+            </div>
+            <div class="col-md-8">
+                <h1>Essa luta é maior que qualquer governo. É da humanidade!</h1>
+            </div>
+        </div>
+    </div>
 </footer>

@@ -1,22 +1,14 @@
-<section>
+<section class="row" *ngIf="statesDonation">
 
-  <md-grid-list cols="5" *ngIf="statesDonation">
-    <md-grid-tile *ngFor="let state of statesDonation">
-      <md-card>
-        <md-card-title>
-          {{state.name}}
-        </md-card-title>
-        <md-card-content>
-          <h3 class="donations">{{state.donations}} Donations</h3>
-          <h3 class="amount">R$ {{state.amount}}</h3>
-        </md-card-content>
+  <div class="col-xs-6 col-sm-4 col-md-3" *ngFor="let state of statesDonation">
+      <div class="card">
+        <header>{{state.name}}</header>
+        
+        <h3 class="donations">{{state.donations}} Donations</h3>
+        <h3 class="amount">R$ {{state.amount}}</h3>
 
-        <md-card-actions>
-            <a md-raised-button routerLink=".">Doar</a>
-        </md-card-actions>
-
-      </md-card>
-    </md-grid-tile>
-  </md-grid-list>
-
+        <a class="btn btn-primary btn-lg btn-block" (click)="donate(state)">Doar</a>
+      </div>
+  </div>
+  
 </section>

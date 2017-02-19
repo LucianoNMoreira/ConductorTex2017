@@ -2,34 +2,33 @@ section{
   background-color: #187E8C;
   padding-top: 50px;
   padding-bottom: 50px;
+  padding-left: 50px;
+  padding-right: 50px
 }
 
-md-card{
+.card{
   text-align: center;
   background-color: #55A4AF;
+  /*box-shadow: 5px 5px;*/
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
 }
 
-md-card,
-figure{
-  width: 80%;
-  height: 80%;
-}
-
-md-card-title{
+.card header{
   font-size: x-large;
   color: #0A6471;
 }
 
-md-card-content .donations{
-  margin-top: 10%;
+.donations{
   font-size: large;
   color: #0A6471;
 }
-md-card-content .amount{
+.amount{
   font-size: large;
   color: #FFD579;
 }
-md-card-actions a{
+.btn{
   background-color: #FFD579;
   color: #0A6471;
 }

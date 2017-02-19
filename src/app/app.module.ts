@@ -8,8 +8,7 @@ import { MapComponent } from './components/map/map.component';
 import { DonationsComponent } from './components/donations/donations.component';
 
 import { AngularFireModule } from 'angularfire2';
-import { MaterialModule } from '@angular/material';
-import 'hammerjs';
+import { AlertModule } from 'ng2-bootstrap';
 
 
 export const firebaseConfig = {
@@ -31,7 +30,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     FormsModule,
     HttpModule,
-    MaterialModule
+    AlertModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,9 @@ h3{
   margin: 0 0 0 0;
   color: white;
 }
+.container{
+  padding-bottom: 50px;
+}
 #map{
   width: 100%;
 }

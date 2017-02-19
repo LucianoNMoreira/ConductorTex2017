@@ -51,7 +51,7 @@ export class MapComponent {
   drawGraph(){
     var states_data = [['State', 'Valor doação (R$)']];
     for (let state of this.states) {
-        states_data.push([state.state, Math.round(state.value/8)]);
+        states_data.push([state.state, Math.round(state.value/6)]);
     }
     
     this.data = google.visualization.arrayToDataTable(states_data);
